@@ -38,6 +38,15 @@ public class CircularBufferTest {
         assertFalse("Buffer is not empty", result);
     }
 
+    @Test
+    public void write_A_ten_time_buffer_should_be_full () {
+        CircularBuffer cb = new CircularBuffer();
+        for(int i = 0; i<10;i++){
+            cb.writeData(Integer.toString(i));
+        }
+        assertTrue(cb.isFull());
+    }
+
 
     @Test
     public void overwrite_A_if_buffer_is_full () {
@@ -48,5 +57,5 @@ public class CircularBufferTest {
         cb.writeData("B");
         assertEquals("B", cb.readData());
     }
-   
+
 }
