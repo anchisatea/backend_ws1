@@ -16,7 +16,7 @@
 + read pointer = 0
 + write pointer = 0
 
-###List of test cases
+### List of test cases
 + TC01 => create_new_buffer_should_empty
 + TC02 => create_new_buffer_with_default_size_should_10
 + TC03 => write_A_B_to_buffer_should_read_A_B_from_buffer
