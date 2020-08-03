@@ -30,5 +30,14 @@ public class CircularBufferTest {
         assertEquals("B", cb.readData());
     }
 
+    @Test
+    public void overwrite_A_if_buffer_is_full () {
+        CircularBuffer cb = new CircularBuffer();
+        for(int i = 0; i<10 ; i++) {
+            cb.writeData("A" + i);
+        }
+        cb.writeData("B");
+        assertEquals("B", cb.readData());
+    }
 
 }
