@@ -17,14 +17,15 @@ public class TennisGame2 {
         String[] textScores = {"Love", "Fifteen", "Thirty", "Forty"};
         String player1Result = "";
         String player2Result = "";
+
         String score = "";
 
 
         // เสมอกัน
         boolean drawScore = player1Point == player2Point && player1Point < 3;
         if (drawScore) {
-            score = textScores[player1Point];
-            score += "-All";
+           // score = textScores[player1Point];
+            // score += "-All";
             return textScores[player1Point] + "-All";
         }
 
@@ -35,47 +36,29 @@ public class TennisGame2 {
         }
 
         //winner
-        if (player1Point >=4 && player2Point >=0 && (player1Point - player2Point)>=2)
-        {
+        boolean player1Win = player1Point >= 4 && player2Point >= 0 && (player1Point - player2Point) >= 2;
+        if (player1Win) {
             return "Win for " + player1Name;
         }
 
-        if (player2Point >=4 && player1Point >=0 && (player2Point - player1Point)>=2)
-        {
+        boolean player2Win = player2Point >= 4 && player1Point >= 0 && (player2Point - player1Point) >= 2;
+        if (player2Win) {
             return "Win for " + player2Name;
         }
 
         //Advantage
-        if (player1Point > player2Point && player2Point >= 3) {
+        boolean player1Advantage = player1Point > player2Point && player2Point >= 3;
+        if (player1Advantage) {
             return "Advantage " + player1Name;
         }
 
-        if (player2Point > player1Point && player1Point >= 3) {
+        boolean player2Advantage = player2Point > player1Point && player1Point >= 3;
+        if (player2Advantage) {
             return "Advantage " + player2Name;
         }
 
-        return textScores[player1Point] + "-" + textScores[player2Point];
-
+       return textScores[player1Point] + "-" + textScores[player2Point];
     }
-
-/*    public void SetP1Score(int number){
-
-        for (int i = 0; i < number; i++)
-        {
-            P1Score();
-        }
-
-    }
-
-
-    public void SetP2Score(int number){
-
-        for (int i = 0; i < number; i++)
-        {
-            P2Score();
-        }
-    }
-*/
 
     public void p1Score(){
         player1Point++;
