@@ -26,3 +26,7 @@
 
 ### Refactor
 + change from duplicate if statement to switch case 
++ remove hardcode
++ refactor and seperate get score cases
++ Add boolean draw and deuce cases
++ Add boolean winner and advantage cases
