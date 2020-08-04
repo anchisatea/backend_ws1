@@ -1,36 +1,21 @@
 import static org.junit.Assert.*;
-
-
 import java.util.Arrays;
-
 import java.util.Collection;
-
 
 import org.junit.Before;
 
 import org.junit.Test;
-
 import org.junit.runner.RunWith;
-
 import org.junit.runners.Parameterized;
-
 import org.junit.runners.Parameterized.Parameters;
-
-
 
 @RunWith(Parameterized.class)
 
 public class TennisTest {
 
-
-
     private int player1Score;
-
     private int player2Score;
-
     private String expectedScore;
-
-
 
     public TennisTest(int player1Score, int player2Score, String expectedScore) {
 
@@ -41,7 +26,6 @@ public class TennisTest {
         this.expectedScore = expectedScore;
 
     }
-
 
 
     @Parameters
@@ -129,7 +113,6 @@ public class TennisTest {
         });
 
     }
-
 
 
     public void checkAllScores(TennisGame2 game) {
