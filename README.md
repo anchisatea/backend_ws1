@@ -23,3 +23,6 @@
 + TC04 => write_A_one_time_buffer_should_not_empty
 + TC05 => write_A_ten_time_buffer_should_be_full
 + TC06 => overwrite_A_if_buffer_is_full
+
+### Refactor
++ change from duplicate if statement to switch case 
